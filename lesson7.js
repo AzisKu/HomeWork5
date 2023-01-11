@@ -27,3 +27,9 @@ const convert = (elem,target, target2) => {
 convert(som, [usd, euro],true)
 convert(usd, [som,euro])
 convert(euro, [som,usd])
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(() => console.error("error"))
+    .finally(() => console.warn("finally"))
